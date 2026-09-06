@@ -3,6 +3,7 @@ import { Target, Layers, Zap, Briefcase, Search, Info } from 'lucide-react';
 import { 
   ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, ZAxis
 } from 'recharts';
+import { API_BASE_URL } from '../api';
 
 const SkillIntelligence = ({ onSelectCareer }) => {
   const [skills, setSkills] = useState([]);
@@ -22,8 +23,8 @@ const SkillIntelligence = ({ onSelectCareer }) => {
     const fetchGlobalData = async () => {
       try {
         const [skillsRes, techRes] = await Promise.all([
-          fetch('http://localhost:8000/api/skills'),
-          fetch('http://localhost:8000/api/technology')
+          fetch(`${API_BASE_URL}/api/skills`),
+          fetch(`${API_BASE_URL}/api/technology`)
         ]);
         
         if (!skillsRes.ok || !techRes.ok) throw new Error('Failed to fetch intelligence data');
@@ -47,7 +48,7 @@ const SkillIntelligence = ({ onSelectCareer }) => {
     setSelectedSkill(skill);
     setLoadingSkillCareers(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/skills/${skill.element_id}/careers`);
+      const res = await fetch(`${API_BASE_URL}/api/skills/${skill.element_id}/careers`);
       const data = await res.json();
       setSkillCareers(data);
     } catch (err) {
@@ -61,7 +62,7 @@ const SkillIntelligence = ({ onSelectCareer }) => {
     setSelectedTech(tech);
     setLoadingTechCareers(true);
     try {
-      const res = await fetch(`http://localhost:8000/api/technology/${tech.element_id}/careers`);
+      const res = await fetch(`${API_BASE_URL}/api/technology/${tech.element_id}/careers`);
       const data = await res.json();
       setTechCareers(data);
     } catch (err) {

@@ -5,6 +5,7 @@ import {
 import { 
   ScatterChart, Scatter, XAxis, YAxis, ZAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer 
 } from 'recharts';
+import { API_BASE_URL } from '../api';
 
 const MarketOverview = ({ onSelectCareer }) => {
   const [data, setData] = useState([]);
@@ -15,7 +16,7 @@ const MarketOverview = ({ onSelectCareer }) => {
   useEffect(() => {
     const fetchMarketData = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/careers');
+        const response = await fetch(`${API_BASE_URL}/api/careers`);
         if (!response.ok) throw new Error('Failed to fetch market data');
         const json = await response.json();
         

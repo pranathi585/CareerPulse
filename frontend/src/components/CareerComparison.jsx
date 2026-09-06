@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { X, Info } from 'lucide-react';
+import { API_BASE_URL } from '../api';
 
 export default function CareerComparison({ initialCareerA, onClose }) {
   const [careerA, setCareerA] = useState(initialCareerA || '');
@@ -11,7 +12,7 @@ export default function CareerComparison({ initialCareerA, onClose }) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/careers')
+    fetch(`${API_BASE_URL}/api/careers`)
       .then(r => r.json())
       .then(d => setAllCareers(d))
       .catch(e => console.error(e));
@@ -37,7 +38,7 @@ export default function CareerComparison({ initialCareerA, onClose }) {
     if (careerA && careerB) {
       setLoading(true);
       setError(null);
-      fetch(`http://localhost:8000/api/careers/compare?codes=${careerA}&codes=${careerB}`)
+      fetch(`${API_BASE_URL}/api/careers/compare?codes=${careerA}&codes=${careerB}`)
         .then(r => r.json())
         .then(d => {
           setCompareData(d);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { X, GitCompare, ChevronRight, Info, CheckCircle2, Zap, Activity } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as RechartsTooltip, ResponsiveContainer, Cell } from 'recharts';
 import CareerPathways from './CareerPathways';
+import { API_BASE_URL } from '../api';
 
 export default function CareerExplorerDetail({ careerSoc, onClose, onCompareCareer, onSelectCareer }) {
   const [data, setData] = useState({
@@ -34,11 +35,11 @@ export default function CareerExplorerDetail({ careerSoc, onClose, onCompareCare
       setLoading(true);
       try {
         const [detRes, skiRes, tecRes, tskRes, relRes] = await Promise.allSettled([
-          fetch(`http://localhost:8000/api/careers/${careerSoc}`),
-          fetch(`http://localhost:8000/api/careers/${careerSoc}/skills`),
-          fetch(`http://localhost:8000/api/careers/${careerSoc}/technology`),
-          fetch(`http://localhost:8000/api/careers/${careerSoc}/tasks?limit=6`),
-          fetch(`http://localhost:8000/api/careers/${careerSoc}/related`)
+          fetch(`${API_BASE_URL}/api/careers/${careerSoc}`),
+          fetch(`${API_BASE_URL}/api/careers/${careerSoc}/skills`),
+          fetch(`${API_BASE_URL}/api/careers/${careerSoc}/technology`),
+          fetch(`${API_BASE_URL}/api/careers/${careerSoc}/tasks?limit=6`),
+          fetch(`${API_BASE_URL}/api/careers/${careerSoc}/related`)
         ]);
 
         if (detRes.status === 'rejected') throw new Error('Failed to load career details');

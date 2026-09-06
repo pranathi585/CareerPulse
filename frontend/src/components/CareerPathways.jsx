@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, ChevronDown, ChevronUp, CheckCircle2, TrendingUp, Users, DollarSign, Briefcase } from 'lucide-react';
+import { API_BASE_URL } from '../api';
 
 export default function CareerPathways({ careerSoc, onSelectCareer, onCompareCareer }) {
   const [pathways, setPathways] = useState([]);
@@ -14,7 +15,7 @@ export default function CareerPathways({ careerSoc, onSelectCareer, onCompareCar
     setError(null);
     setExpandedCard(null);
     
-    fetch(`http://localhost:8000/api/careers/${careerSoc}/pathways`)
+    fetch(`${API_BASE_URL}/api/careers/${careerSoc}/pathways`)
       .then(r => {
         if (!r.ok) throw new Error('Failed to load pathways');
         return r.json();
