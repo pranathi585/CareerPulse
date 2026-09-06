@@ -1,0 +1,146 @@
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+
+/* =========================
+   CAREER ACTION PLAN
+========================= */
+
+.action-section {
+  padding: 110px 0 120px;
+}
+
+.action-header {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: end;
+  gap: 80px;
+  margin-bottom: 48px;
+}
+
+.action-header h2 {
+  margin: 14px 0 0;
+  font-size: 52px;
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+  color: #172033;
+}
+
+.action-header p {
+  margin: 0;
+  max-width: 520px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #60708a;
+}
+
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.action-card {
+  min-height: 300px;
+  padding: 32px;
+  background: #ffffff;
+  border: 1px solid #e3e8f2;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(30, 45, 75, 0.07);
+
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 22px;
+  align-items: start;
+}
+
+.action-card.featured {
+  border-color: #bfc9ff;
+  box-shadow: 0 20px 50px rgba(83, 101, 255, 0.10);
+}
+
+.action-number {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: #eef1ff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+  font-weight: 700;
+  color: #596cff;
+}
+
+.action-content {
+  min-width: 0;
+}
+
+.action-content h3 {
+  margin: 2px 0 12px;
+  font-size: 25px;
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  color: #172033;
+}
+
+.action-content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #64748b;
+}
+
+.action-priority {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #f0f2ff;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: #596cff;
+}
+
+@media (max-width: 900px) {
+  .action-header {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .action-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .action-section {
+    padding: 80px 0;
+  }
+
+  .action-header h2 {
+    font-size: 40px;
+  }
+
+  .action-card {
+    padding: 24px;
+    grid-template-columns: 48px 1fr;
+    gap: 16px;
+  }
+
+  .action-number {
+    width: 46px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,54 @@
+[
+  {
+    "Title":"Business Intelligence Analysts",
+    "job_zone":4,
+    "technology_count":203,
+    "in_demand_count":14,
+    "top_skill":"Reading Comprehension",
+    "skill_importance":4.0,
+    "employment_2025":275.6,
+    "employment_2035":371.0,
+    "projected_growth":34.6,
+    "annual_openings":24.8,
+    "median_wage":120230
+  },
+  {
+    "Title":"Computer Systems Analysts",
+    "job_zone":4,
+    "technology_count":311,
+    "in_demand_count":10,
+    "top_skill":"Reading Comprehension",
+    "skill_importance":3.88,
+    "employment_2025":544.4,
+    "employment_2035":587.2,
+    "projected_growth":7.9,
+    "annual_openings":32.9,
+    "median_wage":105850
+  },
+  {
+    "Title":"Management Analysts",
+    "job_zone":4,
+    "technology_count":216,
+    "in_demand_count":11,
+    "top_skill":"Reading Comprehension",
+    "skill_importance":4.12,
+    "employment_2025":1077.1,
+    "employment_2035":1186.3,
+    "projected_growth":10.1,
+    "annual_openings":94.1,
+    "median_wage":101860
+  },
+  {
+    "Title":"Operations Research Analysts",
+    "job_zone":5,
+    "technology_count":114,
+    "in_demand_count":9,
+    "top_skill":"Reading Comprehension",
+    "skill_importance":4.0,
+    "employment_2025":113.1,
+    "employment_2035":126.6,
+    "projected_growth":11.9,
+    "annual_openings":7.5,
+    "median_wage":88940
+  }
+]

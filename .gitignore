@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Production Build Output
+dist/
+**/dist/
+build/
+
+# Python Cache & Virtual Environments
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*.class
+.venv/
+venv/
+ENV/
+env/
+
+# Environment Variables & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# IDE & Editor Files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*.suo
+*.sln
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Logs & Temporary Files
+*.log
+npm-debug.log*
+yarn-debug.log*
+
+# Large Raw Datasets (Refer to README.md for dataset download instructions)
+datasets/raw/onet_31/*.csv
+!datasets/raw/onet_31/.gitkeep
