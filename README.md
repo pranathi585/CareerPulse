@@ -3,6 +3,8 @@
 A data-driven platform combining O*NET occupational intelligence with U.S. Bureau of Labor Statistics (BLS) market projections to help users analyze career demand, skill requirements, technology landscapes, career pathways, and relative profile alignment.
 
 ---
+🔗 **Live Demo:** https://careerpulse-delta.vercel.app/
+---
 
 ## 1. Overview
 
